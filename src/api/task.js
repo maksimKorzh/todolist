@@ -1,5 +1,10 @@
+//Import mongoose
 const mongoose = require('mongoose');
 
+// Remove annoying deprication warning
+mongoose.set('useFindAndModify', false);
+
+// Deine task schema
 const taskSchema = mongoose.Schema({
   task:{
     type: String,
