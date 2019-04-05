@@ -32,3 +32,14 @@ module.exports.updateTask = (id, updatedTask, options, callback) => {
   }
   Task.findOneAndUpdate(query, update, options, callback);
 }
+
+// Add task
+module.exports.addTask = (task, callback) => {
+  Task.create(task, callback);
+}
+
+// Delete task
+module.exports.removeTask = (id, callback) => {
+  var query = {_id: id};
+  Task.remove(query, callback);
+}

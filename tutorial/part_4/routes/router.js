@@ -39,4 +39,26 @@ router.put('/api/tasks/:_id', (req, res) => {
   })
 });
 
+// Add task
+router.post('/api/tasks', (req, res) => {
+  var task = req.body;
+  Task.addTask(task, (err, task) => {
+    if(err){
+      throw err;
+    }
+    res.json(task);
+  })
+});
+
+// Delete task
+router.delete('/api/tasks/:_id', (req, res) => {
+  var id = req.params._id;
+  Task.removeTask(id, (err, task) => {
+    if(err){
+      throw err;
+    }
+    res.json(task);
+  })
+});
+
 module.exports = router;
