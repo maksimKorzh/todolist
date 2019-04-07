@@ -10,8 +10,9 @@
   "author": "Code Monkey King",
   "license": "ISC",
   "dependencies": {
-    "express": "*",
+    "@angular/cli": "^7.3.8",
     "body-parser": "*",
+    "express": "*",
     "mongoose": "*",
     "nodemon": "^1.18.10"
   }

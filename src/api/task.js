@@ -6,8 +6,16 @@ mongoose.set('useFindAndModify', false);
 
 // Deine task schema
 const taskSchema = mongoose.Schema({
-  task:{
+  id:{
+    type: Number,
+    require: true
+  },
+  title:{
     type: String,
+    require: true
+  },
+  completed:{
+    type: Boolean,
     require: true
   },
   create_date:{
@@ -32,7 +40,9 @@ module.exports.addTask = (task, callback) => {
 module.exports.updateTask = (id, updatedTask, options, callback) => {
   var query = {_id: id};
   var update = {
-    task: updatedTask.task
+    id: updatedTask.id,
+    title: updatedTask.title,
+    completed: updatedTask.completed
   };
   Task.findOneAndUpdate(query, update, options, callback);
 }
