@@ -1,38 +1,37 @@
-<Html>
-<Head>
+<html ng-app="app">
+<head>
 
   <title>TODO List</title>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <div class="jumbotron">
-    <h1 class="display-6 text-center">TODO List</h1>
-   </div>
+  <div class="col">
+    <div class="jumbotron">
+      <h1 class="display-6 text-center">TODO List</h1>
+    </div>
+  </div>
     
-</Head>
+</head>
 
-  <Body>
+  <body>
 
-    <form class="form">
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Add task..." aria-label="" aria-describedby="basic-addon1">
-        <div class="input-group-prepend">
-          <input type="submit" value="Submit" class="btn btn-success">
-        </div>
-      </div>
-    </form>
-  
-    <ul class="list-group">
-      <li class="list-group-item">TODO #1</li>
-      <li class="list-group-item">TODO #2</li>
-      <li class="list-group-item">TODO #3</li>
-      <li class="list-group-item">TODO #4</li>
-      <li class="list-group-item">TODO #5</li>
-    </ul>
+    <div class="col">
+        <form class="form">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Add task..." aria-label="" aria-describedby="basic-addon1">
+            <div class="input-group-prepend">
+              <input type="submit" value="Submit" class="btn btn-success">
+            </div>
+          </div>
+        </form>
+
+        <div ng-view></div>
+    </div>
     
     <script src="/bower_components/jquery/dist/jquery.js"></script>
   	<script src="/bower_components/angular/angular.js"></script>
   	<script src="/bower_components/angular-route/angular-route.js"></script>
   	<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
   	<script src="/app.js"></script>
+  	<script src="/todo.js"></script>
 
-  </Body>
-</Html>
+  </body>
+</html>
