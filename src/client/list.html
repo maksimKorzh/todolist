@@ -14,7 +14,7 @@
       <ul class="list-group">
         <li class="list-group-item">{{ entry.task }}
           <div>
-          <button type="button" class="btn btn-secondary" style="float: left;">Edit</button>
+          <button type="button" class="btn btn-secondary" style="float: left;" ng-click="updateTask(entry._id)">Edit</button>
           <button type="button" class="btn btn-danger" style="float: left;" ng-click="removeTask(entry._id)">Delete</button>
           </div>
         </li>

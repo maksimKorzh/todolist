@@ -41,5 +41,5 @@ module.exports.addTask = (task, callback) => {
 // Delete task
 module.exports.removeTask = (id, callback) => {
   var query = {_id: id};
-  Task.remove(query, callback);
+  Task.deleteOne(query, callback);
 }

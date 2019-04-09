@@ -35,4 +35,14 @@ app.controller('TasksController', ['$scope', '$http', '$location', '$routeParams
   	     })
   }
 
+  $scope.updateTask = function(id){
+  		$http.put('/api/tasks/'+id, $scope.task).then(function(response){
+  			window.location.href='#';
+  		}, function(error) {
+  		  if(error){
+  		    throw error;
+  		  }
+  		});
+  }
+
 }]);
