@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 
 // Remove annoying deprication warning
 mongoose.set('useFindAndModify', false);
+mongoose.set('useFindAndModify', false);
+
 
 // Deine task schema
 const taskSchema = mongoose.Schema({
@@ -40,5 +42,5 @@ module.exports.updateTask = (id, updatedTask, options, callback) => {
 // Delete task
 module.exports.removeTask = (id, callback) => {
   var query = {_id: id};
-  Task.remove(query, callback);
+  Task.deleteOne(query, callback);
 }
